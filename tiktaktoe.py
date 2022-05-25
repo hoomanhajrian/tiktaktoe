@@ -1,8 +1,8 @@
-from changeplayer import change_player
-from checkgame import check_game
-from choosexoro import choose_x_or_o
-from showboard import showboard
-from updateboard import update_board
+from subpackages.changeplayer import change_player
+from subpackages.checkgame import check_game
+from subpackages.choosexoro import choose_x_or_o
+from subpackages.showboard import showboard
+from subpackages.updateboard import update_board
 
 
 def tiktaktoe():
