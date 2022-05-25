@@ -1,40 +1,8 @@
-def check_game(board, player):
-    if(board[0] == board[1] and board[1] == board[2] or board[3] == board[4] and board[4] == board[5] or board[6] == board[7] and board[7] == board[8] or board[0] == board[3] and board[3] == board[6] or board[1] == board[4] and board[4] == board[7] or board[2] == board[5] and board[5] == board[8] or board[0] == board[4] and board[4] == board[8] or board[2] == board[4] and board[4] == board[6]):
-        print("Winner is Player {}".format(player))
-        return False
-    elif(type(board[0]) != type(2) and type(board[1]) != type(2) and type(board[2]) != type(2) and type(board[3]) != type(2) and type(board[4]) != type(2) and type(board[5]) != type(2) and type(board[6]) != type(2) and type(board[7]) != type(2) and type(board[8]) != type(2)):
-        print("Game is full with no winners!")
-        return False
-    else:
-        return True
-
-
-def change_player(player):
-    if (player == "X"):
-        return "O"
-    else:
-        return "X"
-
-
-def showboard(board):
-    print(board[6], "|", board[7], "|", board[8])
-    print("---------")
-    print(board[3], "|", board[4], "|", board[5])
-    print("---------")
-    print(board[0], "|", board[1], "|", board[2])
-
-
-def choose_x_or_o():
-    firstplayer = input("Player 1: Do you want to be X or O?")
-    return firstplayer
-
-
-def update_board(array, position, sign):
-    if(type(array[position]) != type("X")):
-        array[position] = sign
-        return array
-    else:
-        return array
+from changeplayer import change_player
+from checkgame import check_game
+from choosexoro import choose_x_or_o
+from showboard import showboard
+from updateboard import update_board
 
 
 def tiktaktoe():
@@ -62,4 +30,5 @@ def tiktaktoe():
         pass
 
 
-tiktaktoe()
+if __name__ == "__main__":
+    tiktaktoe()
